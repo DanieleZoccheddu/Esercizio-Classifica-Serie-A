@@ -27,7 +27,10 @@ public class Main {
 
         classifica.getClassifica();
 
-
+        System.out.println("Stampo la squadra col migliore attacco");
+        classifica.getMigliorAttacco();
+        System.out.println("Stampo la squadra con la peggiore difesa");
+        classifica.getPeggiorDifesa();
 
     }
 }
