@@ -49,9 +49,16 @@ public class Squadra implements Comparable<Squadra>{
         this.golSubiti += golSubiti;
     }
 
+    public int getGolFatti() {
+        return this.golFatti;
+    }
+    public int getGolSubiti(){
+        return this.golSubiti;
+    }
+
     @Override
     public String toString() {
-        String s = this.nome + " " + this.punteggio + " gol fatti" + this.golFatti + " gol subiti" + this.golSubiti ;
+        String s = this.nome + " " + this.punteggio + " gol fatti: " + this.golFatti + " gol subiti: " + this.golSubiti ;
         return s;
     }
 
