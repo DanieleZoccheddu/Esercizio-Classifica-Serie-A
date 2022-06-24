@@ -47,21 +47,26 @@ public class Classifica {
     }
 
 
-    // getMigliorAttacco(): ritorna la squadra che ha segnato più gol
-    // getPeggiorDifesa(): ritorna la squadra che ha concesso più gol
-
-
-    /**private void sort(){
+    void getMigliorAttacco(){ //ritorna la squadra che ha segnato più gol
+        int squadra = 0;
+        int attacco = 0;
         for(int i = 0; i < classifica.size(); i++){
-            for(int j = i + 1; j < classifica.size(); j++){
-                if(classifica.get(i).getPunteggio() < classifica.get(j).getPunteggio()){
-
-                }
+            if(classifica.get(i).getGolFatti() > attacco){
+                squadra = i;
+                attacco = classifica.get(i).getGolFatti();
             }
         }
+        System.out.println(classifica.get(squadra));
     }
-     */
-
-
-
+    void getPeggiorDifesa(){ //ritorna la squadra che ha concesso più gol
+        int squadra = 0;
+        int difesa = 0;
+        for(int i = 0; i < classifica.size(); i++){
+            if(classifica.get(i).getGolSubiti() > difesa){
+                squadra = i;
+                difesa = classifica.get(i).getGolFatti();
+            }
+        }
+        System.out.println(classifica.get(squadra));
+    }
 }
